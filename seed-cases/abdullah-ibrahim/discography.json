@@ -1,0 +1,853 @@
+{
+  "artist": "Abdullah Ibrahim",
+  "name_variants": [
+    "Dollar Brand",
+    "Abdullah Ibrahim",
+    "Adolph Johannes Brand",
+    "Adolphus Johannes Brand"
+  ],
+  "notes": "Compiled manually via cross-referenced web search (Discogs, Wikipedia, AllMusic, jazzmusicarchives, AllAboutJazz, Encyclopedia.com, flatint blog, RateYourMusic, Album of the Year, Last.fm, Apple Music, Bandcamp). NOT verified against a full Discogs API pull. Treat as a baseline to diff against, not ground truth. status field: 'confirmed' = appears consistently across 2+ independent sources; 'tentative' = appears in only 1 source or with conflicting year/title info; 'gap' = known missing region, not yet researched.",
+  "sort_key_convention": "year field uses recording_year if known and confidently sourced, else release_year. Both are given separately where known.",
+  "albums": [
+    {
+      "order": 1,
+      "title": "Duke Ellington Presents the Dollar Brand Trio",
+      "year": 1963,
+      "recording_year": null,
+      "release_year": 1963,
+      "label": "Reprise",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic",
+        "Encyclopedia.com"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Anatomy of a South African Village",
+      "year": 1965,
+      "recording_year": null,
+      "release_year": 1965,
+      "label": "Reprise",
+      "status": "confirmed",
+      "sources": [
+        "Encyclopedia.com"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "The Dream",
+      "year": 1965,
+      "recording_year": 1965,
+      "release_year": 1965,
+      "label": "Reprise",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic",
+        "Discogs",
+        "Encyclopedia.com"
+      ],
+      "note": "Verified 2026-06-16: recorded live 30 Jan 1965, Jazzhus Montmartre, Copenhagen; original release 1965 (Reprise). Reissued multiple times (vinyl reissues 1979 and 1980, CD reissue 1991 as 'Dollar Brand Trio'). See order 29 -- the previously-flagged '1979 duplicate' is one of these reissues, not a separate work."
+    },
+    {
+      "order": 4,
+      "title": "African Piano",
+      "year": 1969,
+      "recording_year": null,
+      "release_year": 1969,
+      "label": "ECM/JAPO",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "African Sketchbook",
+      "year": 1969,
+      "recording_year": null,
+      "release_year": 1969,
+      "label": "Enja",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "This Is Dollar Brand",
+      "year": 1973,
+      "recording_year": 1965,
+      "release_year": 1973,
+      "label": "Black Lion",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic"
+      ],
+      "note": "Recorded 1965, released 1973 -- recording/release gap."
+    },
+    {
+      "order": 7,
+      "title": "Sangoma",
+      "year": 1973,
+      "recording_year": 1973,
+      "release_year": 1973,
+      "label": "Sackville",
+      "status": "confirmed",
+      "sources": [
+        "Wikipedia"
+      ],
+      "note": "Recorded Toronto, 18 Feb 1973. Shares session material with African Portraits."
+    },
+    {
+      "order": 8,
+      "title": "African Portraits",
+      "year": 1973,
+      "recording_year": 1973,
+      "release_year": 1973,
+      "label": "Sackville",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic",
+        "Wikipedia"
+      ],
+      "note": "Same Toronto session as Sangoma."
+    },
+    {
+      "order": 9,
+      "title": "African Space Program",
+      "year": 1973,
+      "recording_year": null,
+      "release_year": 1973,
+      "label": "Enja",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic",
+        "Encyclopedia.com"
+      ]
+    },
+    {
+      "order": 10,
+      "title": "Fats, Duke & The Monk",
+      "year": 1973,
+      "recording_year": null,
+      "release_year": 1973,
+      "label": null,
+      "status": "tentative",
+      "sources": [
+        "albumoftheyear.org"
+      ],
+      "note": "Possibly overlaps with Sangoma material ('Fats, Duke and the Monk' is also a track/suite title on Sangoma per Wikipedia) -- needs disambiguation, may be a duplicate not a separate album."
+    },
+    {
+      "order": 11,
+      "title": "Ode to Duke Ellington",
+      "year": 1973,
+      "recording_year": null,
+      "release_year": 1973,
+      "label": "Inner City (later repress)",
+      "status": "tentative",
+      "sources": [
+        "albumoftheyear.org",
+        "AllMusic"
+      ]
+    },
+    {
+      "order": 12,
+      "title": "Ancient Africa",
+      "year": 1974,
+      "recording_year": 1972,
+      "release_year": 1974,
+      "label": "JAPO/ECM",
+      "status": "confirmed",
+      "sources": [
+        "Wikipedia"
+      ],
+      "note": "Recorded June 1972 at Jazzhus Montmartre, Copenhagen; released 1974."
+    },
+    {
+      "order": 13,
+      "title": "Good News from Africa",
+      "year": 1974,
+      "recording_year": 1973,
+      "release_year": 1974,
+      "label": "Cameo/Enja",
+      "status": "confirmed",
+      "sources": [
+        "Wikipedia",
+        "AllMusic"
+      ],
+      "note": "Duo with Johnny Dyani. Recorded 10 Dec 1973, Ludwigsburg, Germany."
+    },
+    {
+      "order": 14,
+      "title": "Memories",
+      "year": 1974,
+      "recording_year": 1973,
+      "release_year": 1974,
+      "label": "Philips",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic",
+        "Discogs",
+        "SecondHandSongs"
+      ],
+      "note": "Verified 2026-06-16: real, distinct album, not a duplicate of 'Duke's Memories' (a different, later compilation). Recorded 12 Dec 1973, Tonstudio Bauer, Ludwigsburg, Germany; released 1974 on Philips. Part of the 1973-74 German-session cluster alongside Good News from Africa."
+    },
+    {
+      "order": 15,
+      "title": "Underground in Africa",
+      "year": 1974,
+      "recording_year": null,
+      "release_year": 1974,
+      "label": null,
+      "status": "tentative",
+      "sources": [
+        "jazzmusicarchives"
+      ],
+      "note": "Listed 'with Oswiete' per AllMusic narrative."
+    },
+    {
+      "order": 16,
+      "title": "Mannenberg (Is Where It's Happening)",
+      "year": 1974,
+      "recording_year": null,
+      "release_year": 1974,
+      "label": "Celluloid (France)",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic",
+        "Encyclopedia.com"
+      ],
+      "note": "Title track became an unofficial anthem for Black South Africans."
+    },
+    {
+      "order": 17,
+      "title": "African Breeze",
+      "year": 1974,
+      "recording_year": 1974,
+      "release_year": 1974,
+      "label": "Enja / East Wind",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic",
+        "Discogs",
+        "albumoftheyear.org",
+        "jazznblues.org"
+      ],
+      "note": "Verified 2026-06-16: real, distinct live album. Recorded live 21 Feb 1974; released 1974 (catalog appears under both East Wind and Enja). Resolves as one of the genuine titles in AllMusic's '~9 releases in 1974' cluster."
+    },
+    {
+      "order": 18,
+      "title": "Banyana",
+      "year": 1976,
+      "recording_year": null,
+      "release_year": 1976,
+      "label": "Enja (Germany)",
+      "status": "confirmed",
+      "sources": [
+        "Encyclopedia.com"
+      ]
+    },
+    {
+      "order": 19,
+      "title": "The Children of Africa",
+      "year": 1976,
+      "recording_year": null,
+      "release_year": 1976,
+      "label": null,
+      "status": "tentative",
+      "sources": [
+        "albumoftheyear.org"
+      ],
+      "note": "Listed as Dollar Brand."
+    },
+    {
+      "order": 20,
+      "title": "Black Lightning",
+      "year": 1976,
+      "recording_year": null,
+      "release_year": 1976,
+      "label": null,
+      "status": "tentative",
+      "sources": [
+        "albumoftheyear.org"
+      ]
+    },
+    {
+      "order": 21,
+      "title": "Blues for a Hip King",
+      "year": 1976,
+      "recording_year": null,
+      "release_year": 1976,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "Discogs",
+        "albumoftheyear.org"
+      ],
+      "note": "Verified 2026-06-16: this is the original 1976 studio/session album. See order 40 for the 1989 release of the same title, which is a compilation, not a duplicate original -- resolved, not a conflict."
+    },
+    {
+      "order": 22,
+      "title": "Cape Town Fringe",
+      "year": 1977,
+      "recording_year": null,
+      "release_year": 1977,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "albumoftheyear.org"
+      ],
+      "note": "Listed as Dollar Brand."
+    },
+    {
+      "order": 23,
+      "title": "The Journey",
+      "year": 1977,
+      "recording_year": null,
+      "release_year": 1977,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "AllMusic",
+        "jazzmusicarchives",
+        "albumoftheyear.org"
+      ],
+      "note": "Some sources list 1978; AllMusic narrative says 1977. Features Don Cherry, Hamiet Bluiett."
+    },
+    {
+      "order": 24,
+      "title": "Duet",
+      "year": 1978,
+      "recording_year": null,
+      "release_year": 1978,
+      "label": null,
+      "status": "tentative",
+      "sources": [
+        "albumoftheyear.org"
+      ],
+      "note": "Archie Shepp & Dollar Brand."
+    },
+    {
+      "order": 25,
+      "title": "Autobiography",
+      "year": 1978,
+      "recording_year": 1978,
+      "release_year": 1978,
+      "label": "Plainisphare (LP) / Elephant (CD reissue 2001)",
+      "status": "confirmed",
+      "sources": [
+        "Wikipedia"
+      ],
+      "note": "Recorded 18 June 1978, Switzerland. Two-disc live LP."
+    },
+    {
+      "order": 26,
+      "title": "Nisa",
+      "year": 1978,
+      "recording_year": null,
+      "release_year": 1978,
+      "label": "African Violets (Switzerland)",
+      "status": "confirmed",
+      "sources": [
+        "flatint blog"
+      ]
+    },
+    {
+      "order": 27,
+      "title": "Echoes from Africa",
+      "year": 1979,
+      "recording_year": null,
+      "release_year": 1979,
+      "label": "Enja",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic"
+      ]
+    },
+    {
+      "order": 28,
+      "title": "Africa: Tears and Laughter",
+      "year": 1979,
+      "recording_year": null,
+      "release_year": 1979,
+      "label": "Enja",
+      "status": "confirmed",
+      "sources": [
+        "Encyclopedia.com",
+        "albumoftheyear.org"
+      ]
+    },
+    {
+      "order": 29,
+      "title": "The Dream (1979 reissue)",
+      "year": 1979,
+      "recording_year": null,
+      "release_year": 1979,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "Discogs",
+        "albumoftheyear.org"
+      ],
+      "note": "RESOLVED 2026-06-16: this is a 1979 vinyl reissue of order 3's 1965 recording, not a separate album. Kept as a row for Discogs cross-reference completeness; excluded from the primary chronological list via the 'relation' field.",
+      "relation": {
+        "type": "reissue",
+        "of": [
+          3
+        ]
+      }
+    },
+    {
+      "order": 30,
+      "title": "African Marketplace",
+      "year": 1980,
+      "recording_year": null,
+      "release_year": 1980,
+      "label": "Sire/Discovery",
+      "status": "confirmed",
+      "sources": [
+        "Encyclopedia.com",
+        "albumoftheyear.org"
+      ]
+    },
+    {
+      "order": 31,
+      "title": "Dollar Brand at Montreux / Live at Montreux",
+      "year": 1980,
+      "recording_year": null,
+      "release_year": 1980,
+      "label": "Enja",
+      "status": "confirmed",
+      "sources": [
+        "Encyclopedia.com",
+        "flatint blog"
+      ]
+    },
+    {
+      "order": 32,
+      "title": "African Dawn",
+      "year": 1982,
+      "recording_year": null,
+      "release_year": 1982,
+      "label": "Enja",
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives",
+        "Encyclopedia.com"
+      ]
+    },
+    {
+      "order": 33,
+      "title": "Ekaya",
+      "year": 1983,
+      "recording_year": null,
+      "release_year": 1983,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives",
+        "Discogs"
+      ],
+      "note": "Major work; Ekaya becomes name of his long-running band."
+    },
+    {
+      "order": 34,
+      "title": "Zimbabwe",
+      "year": 1983,
+      "recording_year": null,
+      "release_year": 1983,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives"
+      ]
+    },
+    {
+      "order": 35,
+      "title": "Water from an Ancient Well",
+      "year": 1985,
+      "recording_year": null,
+      "release_year": 1985,
+      "label": "Tiptoe",
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives",
+        "Encyclopedia.com",
+        "albumoftheyear.org"
+      ],
+      "note": "Some sources list 1986. Highly regarded; title reused on 2024 live tracks ('3')."
+    },
+    {
+      "order": 36,
+      "title": "South Africa",
+      "year": 1986,
+      "recording_year": null,
+      "release_year": 1986,
+      "label": "Enja",
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives"
+      ]
+    },
+    {
+      "order": 37,
+      "title": "Mindif",
+      "year": 1988,
+      "recording_year": null,
+      "release_year": 1988,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives"
+      ],
+      "note": "Title later performed live again in 2023, appears on '3' (2024)."
+    },
+    {
+      "order": 38,
+      "title": "Voice of Africa",
+      "year": 1988,
+      "recording_year": null,
+      "release_year": 1988,
+      "label": null,
+      "status": "tentative",
+      "sources": [
+        "jazzmusicarchives"
+      ],
+      "note": "Possible compilation, not yet disambiguated from studio output."
+    },
+    {
+      "order": 39,
+      "title": "Blues for a Hip King (1989 compilation, The African Recordings)",
+      "year": 1989,
+      "recording_year": null,
+      "release_year": 1989,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "Discogs",
+        "jazzmusicarchives"
+      ],
+      "note": "RESOLVED 2026-06-16: this is the 4th volume in the 'complete African recordings' compilation series, reusing the title of order 21's 1976 original album plus tracks from other sessions. Not a duplicate/conflicting original release. Kept as a row for completeness; excluded from the primary chronological list via the 'relation' field.",
+      "relation": {
+        "type": "compilation",
+        "of": [
+          21
+        ],
+        "compiles_from_note": "Also draws from Underground in Africa (1974), Black Lightning (1976), and Dollar Brand Plays Sphere Jazz (1962)."
+      }
+    },
+    {
+      "order": 40,
+      "title": "African River",
+      "year": 1989,
+      "recording_year": null,
+      "release_year": 1989,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives"
+      ]
+    },
+    {
+      "order": 41,
+      "title": "The Mountain",
+      "year": 1989,
+      "recording_year": null,
+      "release_year": 1989,
+      "label": null,
+      "status": "tentative",
+      "sources": [
+        "jazzmusicarchives"
+      ]
+    },
+    {
+      "order": 42,
+      "title": "No Fear, No Die",
+      "year": 1990,
+      "recording_year": null,
+      "release_year": 1990,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives"
+      ]
+    },
+    {
+      "order": 43,
+      "title": "Mantra Mode",
+      "year": 1991,
+      "recording_year": null,
+      "release_year": 1991,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives"
+      ]
+    },
+    {
+      "order": 44,
+      "title": "Desert Flowers",
+      "year": 1992,
+      "recording_year": null,
+      "release_year": 1992,
+      "label": "Enja (ENJ 70112)",
+      "status": "confirmed",
+      "sources": [
+        "Discogs",
+        "Encyclopedia.com"
+      ],
+      "note": "CORRECTED 2026-06-16: original Encyclopedia.com-derived 1982 year was wrong. Confirmed release date is July 1992 on Enja (ENJ 70112); AllMusic's 1991/1992 citation was the accurate one. Reordered accordingly (was incorrectly placed next to the 1982 cluster)."
+    },
+    {
+      "order": 45,
+      "title": "Knysna Blue",
+      "year": 1993,
+      "recording_year": null,
+      "release_year": 1993,
+      "label": null,
+      "status": "tentative",
+      "sources": [
+        "jazzmusicarchives"
+      ],
+      "note": "Source rendered as 'xnysna Blue', likely an OCR/scrape error for 'Knysna Blue' (a town in South Africa)."
+    },
+    {
+      "order": 46,
+      "title": "African Sun",
+      "year": 1994,
+      "recording_year": null,
+      "release_year": 1994,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives"
+      ]
+    },
+    {
+      "order": 47,
+      "title": "Yarona",
+      "year": 1995,
+      "recording_year": null,
+      "release_year": 1995,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives",
+        "Apple Music (Enja Heritage Collection reissue)"
+      ]
+    },
+    {
+      "order": 48,
+      "title": "Cape Town Flowers",
+      "year": 1997,
+      "recording_year": null,
+      "release_year": 1997,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives",
+        "albumoftheyear.org"
+      ]
+    },
+    {
+      "order": 49,
+      "title": "African Suite (for Trio and String Orchestra)",
+      "year": 1999,
+      "recording_year": null,
+      "release_year": 1998,
+      "label": null,
+      "status": "tentative",
+      "sources": [
+        "jazzmusicarchives",
+        "Encyclopedia.com"
+      ],
+      "note": "CONFLICT: jazzmusicarchives says 1999, Encyclopedia.com narrative says 1998. First classical work."
+    },
+    {
+      "order": 50,
+      "title": "Cape Town Revisited",
+      "year": 2000,
+      "recording_year": null,
+      "release_year": 2000,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives"
+      ]
+    },
+    {
+      "order": 51,
+      "title": "Ekapa Lodumo",
+      "year": 2001,
+      "recording_year": null,
+      "release_year": 2001,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives"
+      ]
+    },
+    {
+      "order": 52,
+      "title": "African Magic",
+      "year": 2002,
+      "recording_year": null,
+      "release_year": 2002,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives",
+        "AllMusic"
+      ]
+    },
+    {
+      "order": 53,
+      "title": "Senzo",
+      "year": 2008,
+      "recording_year": null,
+      "release_year": 2008,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives"
+      ]
+    },
+    {
+      "order": 54,
+      "title": "Bombella",
+      "year": 2009,
+      "recording_year": null,
+      "release_year": 2009,
+      "label": null,
+      "status": "confirmed",
+      "sources": [
+        "jazzmusicarchives",
+        "AllMusic"
+      ]
+    },
+    {
+      "order": 55,
+      "title": "Sotho Blue",
+      "year": 2010,
+      "recording_year": null,
+      "release_year": 2010,
+      "label": "Sunnyside",
+      "status": "confirmed",
+      "sources": [
+        "Apple Music",
+        "RateYourMusic"
+      ],
+      "note": "Credited to Abdullah Ibrahim & Ekaya."
+    },
+    {
+      "order": 56,
+      "title": "Mukashi (Once Upon a Time)",
+      "year": 2014,
+      "recording_year": 2013,
+      "release_year": 2014,
+      "label": "Sunnyside",
+      "status": "confirmed",
+      "sources": [
+        "Apple Music",
+        "Discogs",
+        "albumoftheyear.org"
+      ],
+      "note": "RESOLVED 2026-06-16: single album, not two parallel regional releases. Recorded fall 2012-spring 2013, Hansahaus Studios, Bonn, Germany; mixed summer 2013; released 2014 on Sunnyside (US). The earlier 'JAPO' label note was an error -- JAPO (an ECM-affiliated label used for 1969's African Piano) is unrelated to this release; Discogs' 2013/2014 listings reflect promo vs. general-release dating, not separate regional editions."
+    },
+    {
+      "order": 57,
+      "title": "The Song Is My Story",
+      "year": 2014,
+      "recording_year": null,
+      "release_year": 2014,
+      "label": "Sunnyside",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic",
+        "Apple Music",
+        "albumoftheyear.org"
+      ],
+      "note": "Solo piano and saxophone."
+    },
+    {
+      "order": 58,
+      "title": "Universal Silence",
+      "year": 2019,
+      "recording_year": 1972,
+      "release_year": 2019,
+      "label": "Lepo Glasbo",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic"
+      ],
+      "note": "IMPORTANT TEST CASE: live document with Don Cherry & Carlos Ward, recorded 1972, released 47 years later in 2019. Strongest example in this discography of the recording/release-date gap."
+    },
+    {
+      "order": 59,
+      "title": "Dream Time",
+      "year": 2019,
+      "recording_year": null,
+      "release_year": 2019,
+      "label": null,
+      "status": "tentative",
+      "sources": [
+        "Apple Music",
+        "albumoftheyear.org"
+      ],
+      "note": "Distinct from 'The Dream' (orders 3 and 29) -- confirm not a mistaken duplicate."
+    },
+    {
+      "order": 60,
+      "title": "The Balance",
+      "year": 2019,
+      "recording_year": null,
+      "release_year": 2019,
+      "label": "Gearbox (UK)",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic",
+        "Apple Music",
+        "Last.fm"
+      ],
+      "note": "With nonet version of Ekaya. Last.fm shows 14 Aug 2019 / 27 Jun 2019 listed separately -- possible region/format date conflict."
+    },
+    {
+      "order": 61,
+      "title": "Solotude",
+      "year": 2020,
+      "recording_year": 2020,
+      "release_year": 2022,
+      "label": "Gearbox",
+      "status": "confirmed",
+      "sources": [
+        "AllMusic",
+        "RateYourMusic",
+        "Last.fm"
+      ],
+      "note": "IMPORTANT TEST CASE: solo concert recorded on his 86th birthday during COVID lockdown, no audience, at Hirzinger Hall, East Germany. Released 2021 per RateYourMusic/Last.fm, 2022 per AllMusic narrative -- needs final disambiguation but the recording context is consistent across sources."
+    },
+    {
+      "order": 62,
+      "title": "3",
+      "year": 2023,
+      "recording_year": 2023,
+      "release_year": 2024,
+      "label": "Gearbox",
+      "release_date": "2024-01-26",
+      "status": "confirmed",
+      "sources": [
+        "Bandcamp",
+        "AllMusic",
+        "Last.fm",
+        "albumoftheyear.org"
+      ],
+      "note": "Recorded Barbican Hall, London, 15 July 2023 (Vol. 1 direct-to-tape, no audience; Vol. 2 live concert same evening). Released in advance of his 90th birthday. Trio: Cleave Guyton Jr. (flute/piccolo), Noah Jackson (bass/cello)."
+    }
+  ],
+  "open_questions": [
+    "No full Discogs API/title-by-title pull was performed -- verified 2026-06-16 that the Discogs artist page (id 248560) totals match this dataset's premise (70 releases: 55 albums + 13 compilations), but a complete title-by-title cross-check of all 70 against this list has still not been done. Recommended as the first automated step when the pipeline is built (Discogs has a real API; this was checked manually via search/fetch this session).",
+    "2024-2026 output: checked 2026-06-16 (the day after his death, reported 15 June 2026 in Prien am Chiemsee, Germany). No releases found after '3' (2024). No posthumous/archival release has surfaced yet, which is expected given the timing -- worth rechecking in a few months."
+  ]
+}
