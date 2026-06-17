@@ -1,1 +1,18 @@
 .DS_Store
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.venv/
+venv/
+.cache-playlist-gen
+.spotify_search_cache.json
+/manifest.json
+/manifest.md
+
+# Nested sibling repo, staged here temporarily during the GitHub split --
+# has its own .git and gets pushed separately. Move it out to be a true
+# sibling folder whenever convenient; this just keeps it out of this repo's
+# commits in the meantime.
+/abdullah-ibrahim-chronological-discography/
