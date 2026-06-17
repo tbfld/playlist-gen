@@ -44,6 +44,8 @@ def cmd_create(args: argparse.Namespace) -> None:
     exclude = {int(x) for x in args.exclude.split(",")} if args.exclude else set()
     rows = [r for r in rows if r.order not in exclude]
 
+    matched_rows = [r for r in rows if r.spotify_id]
+
     sp = get_user_client()
     me = sp.current_user()
     print(f"Authenticated as Spotify user: {me['id']}")
@@ -64,7 +66,8 @@ def cmd_create(args: argparse.Namespace) -> None:
         sp.playlist_add_items(playlist["id"], track_uris[i : i + 100])
 
     print(f"Created playlist '{args.name}': {playlist['external_urls']['spotify']}")
-    print(f"{len(track_uris)} tracks added across {len(rows)} albums.")
+    print(f"{len(track_uris)} tracks added across {len(matched_rows)} albums "
+          f"({len(rows) - len(matched_rows)} approved rows had no Spotify match and contributed nothing).")
 
 
 def main() -> None:
