@@ -46,13 +46,20 @@ def cmd_create(args: argparse.Namespace) -> None:
 
     sp = get_user_client()
     me = sp.current_user()
+    print(f"Authenticated as Spotify user: {me['id']}")
     track_uris = collect_track_uris(sp, rows)
 
     if not track_uris:
         print("No track URIs to add -- nothing created.", file=sys.stderr)
         sys.exit(1)
 
-    playlist = sp.user_playlist_create(me["id"], args.name, public=False, description=args.description or "")
+    # NOTE: spotipy's `user_playlist_create(user, ...)` posts to the now-removed
+    # `POST /users/{user_id}/playlists` endpoint (Spotify retired it for
+    # Development Mode apps in the Feb/Mar 2026 API changes -- it 403s even
+    # when `user` is your own ID). `current_user_playlist_create(...)` posts to
+    # the replacement, `POST /me/playlists`, instead. See:
+    # https://developer.spotify.com/documentation/web-api/tutorials/february-2026-migration-guide
+    playlist = sp.current_user_playlist_create(args.name, public=False, description=args.description or "")
     for i in range(0, len(track_uris), 100):
         sp.playlist_add_items(playlist["id"], track_uris[i : i + 100])
 

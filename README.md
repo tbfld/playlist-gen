@@ -57,6 +57,13 @@ You'll need a Spotify Developer app (client ID/secret) with a redirect URI
 matching `.env.example`. First run will prompt an OAuth browser flow; the
 refresh token gets cached locally (gitignored) so you don't repeat it.
 
+As of Spotify's Feb/Mar 2026 API changes, Development Mode apps require the
+app owner to have an active Spotify Premium subscription, and are capped at
+5 users. `create` already targets the post-migration endpoints
+(`POST /me/playlists`, not the retired `POST /users/{id}/playlists`); if you
+hit a 403 on playlist creation, it's most likely this account/quota
+requirement rather than a code bug.
+
 **Run this locally, not in a sandboxed environment** — it needs to reach
 Spotify's API and open a browser for OAuth.
 
