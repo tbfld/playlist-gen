@@ -3,6 +3,7 @@
 Usage:
     python -m playlist_gen.cli manifest <discography.json> [--out manifest.md] [--json manifest.json]
     python -m playlist_gen.cli create <manifest.json> --name "..." [--exclude 10,19]
+    python -m playlist_gen.cli outline <discography.json> [--out discography.txt]
 
 The two subcommands are deliberately separate. `manifest` only reads from
 Spotify (search, app-only auth) and writes local files -- no browser login,
@@ -16,7 +17,7 @@ from __future__ import annotations
 import argparse
 import sys
 
-from .discography import load_discography
+from .discography import load_discography, render_outline
 from .manifest import build_manifest, collect_track_uris, load_manifest_json, render_markdown, save_manifest_json
 from .spotify_client import get_search_client, get_user_client
 
@@ -36,6 +37,17 @@ def cmd_manifest(args: argparse.Namespace) -> None:
         with open(args.out, "w", encoding="utf-8") as f:
             f.write(md)
         print(f"Saved manifest to {args.out}")
+
+
+def cmd_outline(args: argparse.Namespace) -> None:
+    data = load_discography(args.discography)
+    txt = render_outline(data)
+    print(txt)
+
+    if args.out:
+        with open(args.out, "w", encoding="utf-8") as f:
+            f.write(txt)
+        print(f"\nSaved outline to {args.out}")
 
 
 def cmd_create(args: argparse.Namespace) -> None:
@@ -79,6 +91,13 @@ def main() -> None:
     p_manifest.add_argument("--out", help="Write the manifest as Markdown to this path")
     p_manifest.add_argument("--json", help="Write the manifest as JSON to this path (required input for `create`)")
     p_manifest.set_defaults(func=cmd_manifest)
+
+    p_outline = sub.add_parser(
+        "outline", help="Write a plain-text, minimally annotated chronological outline of a discography.json."
+    )
+    p_outline.add_argument("discography", help="Path to a discography.json file")
+    p_outline.add_argument("--out", help="Write the outline as plain text to this path")
+    p_outline.set_defaults(func=cmd_outline)
 
     p_create = sub.add_parser("create", help="Create the real Spotify playlist from an approved manifest JSON.")
     p_create.add_argument("manifest", help="Path to a manifest JSON file produced by `manifest --json`")
