@@ -236,11 +236,31 @@ def match_album(
     )
 
 
-def album_track_uris(sp: spotipy.Spotify, album_id: str) -> list[str]:
-    """Return this album's track URIs in album order (handles pagination)."""
-    uris: list[str] = []
+def album_tracks(sp: spotipy.Spotify, album_id: str) -> list[dict]:
+    """Return this album's tracks in album order (handles pagination), each
+    as {"disc_number", "track_number", "name", "duration_ms", "uri"}.
+
+    Service-agnostic metadata (track titles, numbers, durations) -- useful
+    on its own (e.g. as the basis for a playlist on a different streaming
+    service), not just for building Spotify URIs.
+    """
+    tracks: list[dict] = []
     results = sp.album_tracks(album_id, limit=50)
     while results:
-        uris.extend(item["uri"] for item in results["items"])
+        for item in results["items"]:
+            tracks.append(
+                {
+                    "disc_number": item["disc_number"],
+                    "track_number": item["track_number"],
+                    "name": item["name"],
+                    "duration_ms": item["duration_ms"],
+                    "uri": item["uri"],
+                }
+            )
         results = sp.next(results) if results.get("next") else None
-    return uris
+    return tracks
+
+
+def album_track_uris(sp: spotipy.Spotify, album_id: str) -> list[str]:
+    """Return this album's track URIs in album order (handles pagination)."""
+    return [t["uri"] for t in album_tracks(sp, album_id)]

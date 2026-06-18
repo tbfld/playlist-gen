@@ -79,6 +79,24 @@ python -m playlist_gen.cli create manifest.json --name "Artist Name, chronologic
 edit `manifest.json`/`manifest.md` first if you want to exclude or
 hand-correct anything.
 
+### Outline (plain-text, service-agnostic export)
+
+```
+python -m playlist_gen.cli outline path/to/discography.json --out discography.txt
+# or, to also append a per-album track listing (title/number/duration):
+python -m playlist_gen.cli outline path/to/discography.json --manifest manifest.json --out discography.txt
+```
+
+`outline` writes a minimally annotated, skimmable plain-text document: a
+one-line-per-entry chronological index, and (with `--manifest`) a second
+section listing every track on every matched album. The track section pulls
+disc/track number, title, and duration from Spotify's catalog but is plain
+metadata, not a Spotify-specific format — meant as a portable starting point
+for building the same playlist on a different service. Entries with no
+Spotify match, or that are reissues/compilations, are noted rather than
+silently skipped. `--manifest` only needs app-only auth (no browser login),
+but still needs real network access, same caveat as above.
+
 ## discography.json format
 
 ```json

@@ -4,6 +4,7 @@ Usage:
     python -m playlist_gen.cli manifest <discography.json> [--out manifest.md] [--json manifest.json]
     python -m playlist_gen.cli create <manifest.json> --name "..." [--exclude 10,19]
     python -m playlist_gen.cli outline <discography.json> [--out discography.txt]
+                                        [--manifest manifest.json]
 
 The two subcommands are deliberately separate. `manifest` only reads from
 Spotify (search, app-only auth) and writes local files -- no browser login,
@@ -18,7 +19,15 @@ import argparse
 import sys
 
 from .discography import load_discography, render_outline
-from .manifest import build_manifest, collect_track_uris, load_manifest_json, render_markdown, save_manifest_json
+from .manifest import (
+    build_manifest,
+    collect_track_uris,
+    fetch_track_listings,
+    load_manifest_json,
+    render_markdown,
+    render_track_listings,
+    save_manifest_json,
+)
 from .spotify_client import get_search_client, get_user_client
 
 
@@ -42,6 +51,13 @@ def cmd_manifest(args: argparse.Namespace) -> None:
 def cmd_outline(args: argparse.Namespace) -> None:
     data = load_discography(args.discography)
     txt = render_outline(data)
+
+    if args.manifest:
+        rows = load_manifest_json(args.manifest)
+        sp = get_search_client()
+        listings = fetch_track_listings(sp, rows)
+        txt += "\n\n" + render_track_listings(data, rows, listings)
+
     print(txt)
 
     if args.out:
@@ -97,6 +113,11 @@ def main() -> None:
     )
     p_outline.add_argument("discography", help="Path to a discography.json file")
     p_outline.add_argument("--out", help="Write the outline as plain text to this path")
+    p_outline.add_argument(
+        "--manifest",
+        help="Path to a manifest JSON file -- if given, also fetches and appends a per-album track-listing "
+        "section (network required; app-only auth, no browser login).",
+    )
     p_outline.set_defaults(func=cmd_outline)
 
     p_create = sub.add_parser("create", help="Create the real Spotify playlist from an approved manifest JSON.")

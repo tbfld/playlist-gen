@@ -7,11 +7,12 @@ by a human before a live playlist is created or written to.
 from __future__ import annotations
 
 import json
+import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
 
 from .cache import DEFAULT_CACHE_PATH, load_cache, save_cache
-from .spotify_client import AlbumMatch, album_track_uris, match_album
+from .spotify_client import REQUEST_DELAY_SECONDS, AlbumMatch, album_track_uris, album_tracks, match_album
 
 
 @dataclass
@@ -136,3 +137,58 @@ def collect_track_uris(sp, rows: list[ManifestRow]) -> list[str]:
             continue
         uris.extend(album_track_uris(sp, r.spotify_id))
     return uris
+
+
+def fetch_track_listings(sp, rows: list[ManifestRow], delay: float = REQUEST_DELAY_SECONDS) -> dict[int, list[dict]]:
+    """Fetch the full track listing (disc/track number, title, duration) for
+    every row that has a Spotify match, keyed by manifest `order`. Read-only,
+    app-only auth (get_search_client()) -- no user login needed, same as
+    `manifest`. Rows with no match are simply absent from the result.
+    """
+    listings: dict[int, list[dict]] = {}
+    for r in rows:
+        if not r.spotify_id:
+            continue
+        time.sleep(delay)
+        listings[r.order] = album_tracks(sp, r.spotify_id)
+    return listings
+
+
+def render_track_listings(data: dict, rows: list[ManifestRow], listings: dict[int, list[dict]]) -> str:
+    """Render the second section of the combined discography document: an
+    album-by-album track listing, in the same chronological order as
+    `discography.render_outline`'s first section (including reissues/
+    compilations, which point back to their canonical entry instead of
+    repeating a listing).
+    """
+    by_order = {r.order: r for r in rows}
+    albums = sorted(data["albums"], key=lambda a: a["order"])
+
+    lines = ["TRACK LISTINGS", "(album-by-album, same order as the outline above)", ""]
+    for a in albums:
+        order = a["order"]
+        lines.append(f"{order}. {a['title']} ({a['year']})")
+
+        relation = a.get("relation")
+        if relation:
+            of = ", ".join(f"#{n}" for n in relation["of"])
+            lines.append(f"    [{relation['type']} of {of} -- see that entry for the track listing]")
+            lines.append("")
+            continue
+
+        row = by_order.get(order)
+        tracks = listings.get(order) if row else None
+        if not tracks:
+            reason = "no Spotify match" if not row or not row.spotify_id else "not fetched"
+            lines.append(f"    ({reason} -- track listing not available; see research.md)")
+            lines.append("")
+            continue
+
+        multi_disc = len({t["disc_number"] for t in tracks}) > 1
+        for t in tracks:
+            num = f"{t['disc_number']}.{t['track_number']:02d}" if multi_disc else f"{t['track_number']:>2}"
+            mins, secs = divmod(round(t["duration_ms"] / 1000), 60)
+            lines.append(f"   {num}. {t['name']}  ({mins}:{secs:02d})")
+        lines.append("")
+
+    return "\n".join(lines)
